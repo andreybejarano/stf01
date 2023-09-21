@@ -1,0 +1,57 @@
+main {
+  position: relative;
+  width: 800px;
+  height: 450px;
+  background-color: green;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+#box1 {
+  position: relative;
+  left: 50px;
+  top: 50px;
+  background-color: red;
+}
+#box2 {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  background-color: blue;
+  animation: rotar 1s;
+}
+#box3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: yellow;
+}
+#box4 {
+  position: relative;
+  background-color: gray;
+  transition: all 500ms ease-out;
+}
+#box4:hover {
+    background-color: gainsboro;
+    border-radius: 50%;
+}
+@keyframes rotar {
+    from {
+        transform: rotate(180deg);
+        width: 25px;
+        height: 25px;
+    }
+    to {
+        width: 105px;
+        height: 105px;
+    }
+}
