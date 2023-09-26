@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', mainRoutes);
 
 app.use((req, res, next) => {
-    res.status(404).send("Sorry can't find that!")
+    res.status(404).sendFile(path.join(__dirname, 'views/404.html'))
 });
 
 const port = 3000;

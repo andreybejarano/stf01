@@ -140,6 +140,40 @@ html {
   outline: 0;
 }
 
+.error-container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error-container h1 {
+    font-size: 72px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.error-container p {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.error-container a {
+    text-decoration: none;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.error-container a:hover {
+    background-color: #c0392b;
+}
+
 @media only screen and (max-device-width: 1600px) {
   .bgimg-1,
   .bgimg-2,
