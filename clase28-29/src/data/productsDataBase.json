@@ -160,41 +160,5 @@
     "discount": "10",
     "category": "visited",
     "description": "prueba 2"
-  },
-  {
-    "id": 19,
-    "image": "default-image.png",
-    "name": "prueba 3",
-    "price": "50000",
-    "discount": "10",
-    "category": "visited",
-    "description": "prueba 3"
-  },
-  {
-    "id": 20,
-    "image": "default-image.png",
-    "name": "prueba 4",
-    "price": "2121212",
-    "discount": "80",
-    "category": "in-sale",
-    "description": "prueba 4"
-  },
-  {
-    "id": 21,
-    "image": "default-image.png",
-    "name": "prueba5",
-    "price": "10000",
-    "discount": "20",
-    "category": "in-sale",
-    "description": "prueba 5\r\n"
-  },
-  {
-    "id": 22,
-    "image": "default-image.png",
-    "name": "prueba 6",
-    "price": "100000",
-    "discount": "20",
-    "category": "in-sale",
-    "description": "prueba6"
   }
 ]

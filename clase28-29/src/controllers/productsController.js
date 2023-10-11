@@ -91,6 +91,17 @@ const controller = {
 	// Delete - Delete one product from DB
 	destroy: (req, res) => {
 		// Do the magic
+		const products = getProducts();
+		//  Eliminar un elelemtno de un array con filter
+		// const productsFiltered = products.filter(products => products.id != req.params.id);
+		// fs.writeFileSync(productsFilePath, JSON.stringify(productsFiltered, null, 2));
+
+		//  Eliminar un elelemtno de un array con splice, se debe obtener el id del elemento a eliminar
+		const indexProduct = products.findIndex(product => product.id == req.params.id);
+		// usando el splice se le pasa el indice del elemento a eliminar y 1 q es la cantidad de elementos a eliminar
+		products.splice(indexProduct, 1);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+		res.redirect('/products');
 	}
 };
 
