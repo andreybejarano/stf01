@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aqui van a hacer lo suyo!</h1>
+    <form action="/login" method="post">
+        <input type="email" name="email" placeholder="Ingresa Email">
+        <input type="password" name="password" placeholder="Ingresa la contraseña">
+        <% if (locals.errors?.unauthorized) { %>
+            <p style="color: red;"><%= errors.unauthorized.msg %></p>
+        <% }%>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
