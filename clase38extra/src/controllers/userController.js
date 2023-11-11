@@ -1,3 +1,5 @@
+const { validationResult } = require('express-validator');
+
 const db = require('../database/models');
 
 const controller = {
@@ -6,14 +8,23 @@ const controller = {
     },
     async store(req, res) {
         try {
+            const errors = validationResult(req);
+            if (!errors.isEmpty()) {
+                return res.render('register', {
+                    errors: errors.mapped(),
+                    oldData: req.body
+                });
+            }
+            const role = await db.Role.findOne({ where: { name: 'Usuario' } })
             const newUser = {
                 ...req.body,
-                img: req.file?.filename 
+                img: req.file?.filename,
+                roles_id: role.id
             };
             await db.User.create(newUser);
             return res.redirect('/login');
         } catch (error) {
-          return res.status(500).send(error);  
+            return res.status(500).send(error);
         }
     }
 }

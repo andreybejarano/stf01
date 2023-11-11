@@ -15,27 +15,16 @@
                 <h3 class="form-card-title">Registrarme</h3>
                 <div class="text-danger">
                 </div>
-                <form action="/user/register" class="register-form" method="POST" enctype="multipart/form-data">
+                <form action="/user/register" class="register-form" method="POST" enctype="multipart/form-data" autocomplete="off">
 
                     <div class="form-control">
                         <label for="name">Nombre</label>
-                        <input class="inputhover" type="text" name="firstName" id="name"
-                            value="<%= locals.oldData ? oldData.firstName : null%>">
+                        <input class="inputhover" type="text" name="name" id="name"
+                            value="<%= locals.oldData ? oldData.name : null%>">
                         <p class="error-message" id="error-name"></p>
-                        <% if (locals.errors && errors.firstName) { %>
+                        <% if (locals.errors && errors.name) { %>
                             <div class="text-danger">
-                                <%= errors.firstName.msg %>
-                            </div>
-                            <% } %>
-                    </div>
-                    <div class="form-control">
-                        <label for="lastName">Apellido</label>
-                        <input class="inputhover" type="text" name="lastName" id="lastName"
-                            value="<%= locals.oldData ? oldData.lastName : null%>">
-                        <p class="error-message" id="error-lastName"></p>
-                        <% if (locals.errors && errors.lastName) { %>
-                            <div class="text-danger">
-                                <%= errors.lastName.msg %>
+                                <%= errors.name.msg %>
                             </div>
                             <% } %>
                     </div>
