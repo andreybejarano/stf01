@@ -1,0 +1,29 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.img-detalle-user {
+    width: 150px;
+    /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    /* Centrar la imagen */
+}
+
+.nombreCompleto-user {
+    text-align: center;
+    color: #333;
+    /* Color de texto oscuro */
+}
+
+.email-user {
+    text-align: center;
+    color: #666;
+    /* Color de texto más claro */
+    margin-top: 10px;
+}

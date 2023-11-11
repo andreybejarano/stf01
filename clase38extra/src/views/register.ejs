@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="container">
+        <section class="container-form">
+            <div class="green-container">
+                <h3 class="form-card-title">Registrarme</h3>
+                <div class="text-danger">
+                </div>
+                <form action="/user/register" class="register-form" method="POST" enctype="multipart/form-data">
+
+                    <div class="form-control">
+                        <label for="name">Nombre</label>
+                        <input class="inputhover" type="text" name="firstName" id="name"
+                            value="<%= locals.oldData ? oldData.firstName : null%>">
+                        <p class="error-message" id="error-name"></p>
+                        <% if (locals.errors && errors.firstName) { %>
+                            <div class="text-danger">
+                                <%= errors.firstName.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="form-control">
+                        <label for="lastName">Apellido</label>
+                        <input class="inputhover" type="text" name="lastName" id="lastName"
+                            value="<%= locals.oldData ? oldData.lastName : null%>">
+                        <p class="error-message" id="error-lastName"></p>
+                        <% if (locals.errors && errors.lastName) { %>
+                            <div class="text-danger">
+                                <%= errors.lastName.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Correo electronico</label>
+                        <input class="inputhover" type="email" name="email" id="email"
+                            value="<%= locals.oldData ? oldData.email : null%>">
+                        <p class="error-message" id="error-email"></p>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="form-control">
+                        <label for="password">Contraseña</label>
+                        <input class="inputhover" type="password" name="password" id="password">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="form-control">
+                        <label for="profile_pic">Imagen</label>
+                        <input class="inputhover" type="file" name="profile_pic" id="profile_pic">
+                        <p class="error-message" id="error-profile_pic"></p>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="action">
+                        <button type="submit" id="btn-submit" class="text-danger">
+                            Finalizar
+                        </button>
+                    </div>
+                </form>
+                <div class="loginlink">
+                    <h5><a href="./login"> ¿Ya tenes cuenta? Ingresa por aqui! </a></h5>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

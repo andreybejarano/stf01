@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(76, 79, 46);
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-form {
+    width: 400px;
+}
+
+.green-container {
+    background-color: rgb(90, 77, 22);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.green-container:hover {
+    background-color: rgb(102, 88, 25);
+    box-shadow: 0px 0px 10px rgb(255, 255, 0);
+}
+
+.inputhover:hover {
+    transform: scale(1.1)
+}
+
+.form-card-title {
+    color: #fff;
+    text-align: center;
+}
+
+
+.text-danger {
+    color: #f00;
+    margin-top: 10px;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: #f00;
+    margin-top: 5px;
+}
+
+.action {
+    text-align: center;
+}
+
+#btn-submit {
+    background-color: #f00;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loginlink {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.loginlink a {
+    color: #fff;
+    text-decoration: none;
+}
