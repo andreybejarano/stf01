@@ -4,6 +4,8 @@ const path = require('path');
 const expressSession = require('express-session');
 const cookieParser = require('cookie-parser');
 
+const userRoutes = require('./routes/user');
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -17,8 +19,11 @@ app.use(expressSession({
 }));
 app.use(cookieParser());
 
+app.use('/user', userRoutes);
 
-
+app.use((req, res, next) => {
+    return res.status(404).render('404');
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
