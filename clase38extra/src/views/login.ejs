@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="container">
+        <section class="container-form">
+            <div class="form-card">
+                <h2 class="form-card-title">Mi Cuenta</h2>
+
+                <div class="form-card-container">
+                    <form action="/user/processLogin" method="POST" class="inicio-sesion-form">
+                        <div class="form-control">
+                            <h4 for="email">Dirección de correo electronico</h4>
+                            <input type="email" name="email" id="email"
+                                value="<%= locals.oldData && oldData.email ? oldData.email : null %>">
+                            <p class="error-message" id="error-email"></p>
+                        </div>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+                                <br>
+                                <div class="form-control">
+                                    <h4 for="password">Contraseña</h4>
+                                    <input type="password" name="password" id="password">
+                                    <p class="error-message" id="error-password"></p>
+                                    <% if (locals.errors && errors.password) { %>
+                                        <div class="text-danger">
+                                            <%= errors.password.msg %>
+                                        </div>
+                                        <% } %>
+                                </div>
+
+                                <div>
+                                    <h5 class="contraseña"><a href="olvidaste-contraseña"> ¿Olvidaste tu contraseña?
+                                        </a>
+                                    </h5>
+                                </div>
+                                <br>
+
+                                <div class="ingresar">
+                                    <button class="ingresar" type="submit" value="Login">
+                                        Acceder
+                                    </button>
+                                </div>
+                                <br>
+
+                                <br>
+                                <div class="recordar-mi"><input class="checkbox" type="checkbox" name="remember_me">
+                                    <h5 class="recordar-cuenta"> Recordar mi cuenta</h5>
+                                </div>
+                                <br>
+
+
+                                <hr>
+
+                                <div>
+                                    <h5><a href="./register"> ¿No tenes cuenta? Registrate aquí! </a></h5>
+                                </div>
+                                <br>
+    </main>
+</body>
+
+</html>

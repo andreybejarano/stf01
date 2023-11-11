@@ -1,0 +1,96 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-form {
+    width: 400px;
+}
+
+.form-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-card-title {
+    text-align: center;
+    color: #333;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: #f00;
+    margin-top: 5px;
+}
+
+.text-danger {
+    color: #f00;
+    margin-top: 10px;
+}
+
+.ingresar {
+    background-color: #f00;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.recordar-cuenta {
+    margin-bottom: 0;
+}
+
+.logos-juntos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.ingreso-mail,
+.ingreso-face {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.ingresar a,
+.recordar-mi a {
+    text-decoration: none;
+    color: #333;
+}
