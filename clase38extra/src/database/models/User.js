@@ -29,7 +29,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     img: {
       type: DataTypes.TEXT,
-      allowNull: true
+      allowNull: true,
+      defaultValue: 'default-avatar.png'
     },
     roles_id: {
       type: DataTypes.INTEGER
